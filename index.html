@@ -1,0 +1,325 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Ming-Teng Wu</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header" class="alt">
+						<span class="logo"><img src="images/logo.svg" alt="" /></span>
+						<h1>Ming-Teng Wu (吳明騰)</h1>
+						<p>Graduate student at National Central University (NCU), Master in CSIE!<br /></p>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							<li><a href="#intro" class="active">About me</a></li>
+							<li><a href="#Edu">Education</a></li>
+							<li><a href="#Project">Projects</a></li>
+							<li><a href="#Contest">Contest Experience</a></li>
+							<li><a href="#skill">Skills</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- About me -->
+							<section id="intro" class="main">
+								<div class="spotlight">
+									<div class="content">
+										<header class="major">
+											<h2>About Me</h2>
+										</header>
+										<p>
+											I'm Ming-Teng Wu (吳明騰), a graduate student at National Central University (NCU), majoring in Computer Science & Information Engineering. I am currently working in the Advanced Defense Lab, advised by Prof. Fu-Hau Hsu(許富皓博士). My research interests include Operating System, Computer Security, and Computer Network. I am also interested in the field of AI, especially in the field of Computer Vision and Natural Language Processing
+										</p>
+									</div>
+									<span class="image"><img src="images/avatar.jpg" alt="" /></span>
+								</div>
+							</section>
+
+						<!-- Education -->
+							<section id="Edu" class="main special">
+								<header class="major">
+									<h2>Education</h2>
+								</header>
+
+								<ul class='feature'>
+									<div class="row">
+										<div class="col-2 col-12-medium">
+												<p><span class="icon brand style2" ><img src="images/NCU.png" alt="" style="width:70%"></span></p>
+										</div>
+										<div class="col-7 col-12-medium">
+											<p style="text-align:left;">
+												<strong>M.S. in Computer Science & Information Engineering</strong><br>
+												National Central University, <em>Sept. 2023 - Now</em><br>
+												Rank / All :  1 / 138 (0.72%) <br>
+												GPA 4.3/4.3<br>
+
+												<a href="https://adl.tw/" style="color: darkred;">Advanced Defense Lab</a><br>
+												Advisor: Prof. <strong><a href="https://staff.csie.ncu.edu.tw/hsufh/" style="color: darkred;">Fu-Hau Hsu(許富皓博士)</a></strong>
+											</p> 
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-2 col-12-medium">
+												<p><span class="icon brand style2" ><img src="images/NCNU.png" alt="" style="width:70%"></span></p>
+										</div>
+										<div class="col-8 col-12-medium">
+											<p style="text-align:left;">
+												<strong>B.S. in Computer Science & Information Engineering</strong><br>
+												National Chi Nan University, <em>Sept. 2019 - Jun. 2023</em><br>
+											</p> 
+										</div>										
+									</div>
+									
+								</ul>
+							</section>
+
+						<!-- Projects -->
+						<section id="Project" class="main special">
+							<header class="major">
+								<h2>Projects</h2>
+							</header>
+							<ul class='feature'>
+								<div class="row">
+									<div class="col-2 col-12-medium">
+											<p><span class="icon brand style2" ><img src="images/rasberrypi.png" alt="" style="width:70%"></span></p>
+									</div>
+									<div class="col-7 col-12-medium">
+										<p style="text-align:left;">
+											<strong>Bare Programming on rpi3 (Raspberry Pi 3) </strong><em>Jan. 2024 – Now</em>
+										</p>
+										<ul>
+											<li style="text-align:left;">
+												Booting Implementation
+												<ul>
+													<li style="text-align:left;">Implement traversal devicetree to find the information of device rip3.</li>
+													<li style="text-align:left;">Implement initial ramdisk through archive format cpio.</li>
+													<li style="text-align:left;">Implement a bootloader that loads kernel images through UART.</li>
+												</ul>
+											</li>
+											<li style="text-align:left;">
+												Exception and Interrupt Implementation
+												<ul>
+													<li style="text-align:left;">Implement Synchronous Exception througt enable CPU core timer to print something in the specific second.</li>
+													<li style="text-align:left;">Implement Asynchronous Read and Write through UART’s interrupt handler putting/getting data in/from buffer.</li>
+												</ul>
+											</li>
+											<li style="text-align:left;">
+												Thread and User Process Implementation
+												<ul>
+													<li style="text-align:left;">Implement Run Queues, Wait Queues, Scheduler and Context Switch.</li>
+													<li style="text-align:left;">Implement Syscalls including fork(), exit(), kill(), read(), write(), etc.</li>
+													<li style="text-align:left;">Implement POSIX Signal including signal() and kill().</li>
+												</ul>
+											</li>
+											<li style="text-align:left;">
+												Virtual Address Implementation
+												<ul>
+													<li style="text-align:left;">Implement 4-level Page Table for Kernel Process and User Process.</li>
+													<li style="text-align:left;">Implement the function mmap() with VMA (Virtual Memory Area) for User Process.</li>
+													<li style="text-align:left;">Implement Page Fault Handler, Demand Paging and Copy-on-Write.</li>
+												</ul>
+											</li>
+										</ul>
+									</div>									
+								</div>
+							</ul>
+
+							<ul class='feature'>
+								<div class="row">
+									<div class="col-2 col-12-medium">
+											<p><span class="icon brand style2" ><img src="images/linux.png" alt="" style="width:70%"></span></p>
+									</div>
+									<div class="col-7 col-12-medium">
+										<p style="text-align:left;">
+											<strong>Tracing of Linux Kernel Code </strong><em>Sep. 2023 – Jan. 2024</em>
+										</p>
+										<ul>
+											<li style="text-align:left;">
+												Research in two topics “Paging” and “Scheduler” through adding new System Calls in the Linux Kernel.
+												<ul>
+													<li style="text-align:left;">Paging: 	How to translate the Physical Address from Virtual Address?</li>
+													<li style="text-align:left;">Scheduler:	How the Linux Scheduler do when we modify the priority of each process?</li>
+												</ul>
+											</li>
+										</ul>
+									</div>									
+								</div>
+							</ul>
+							<ul class='feature'>
+								<div class="row">
+									<div class="col-2 col-12-medium">
+											<p><span class="icon brand style2" ><img src="images/TCP.png" alt="" style="width:70%"></span></p>
+									</div>
+									<div class="col-7 col-12-medium">
+										<p style="text-align:left;">
+											<strong>TCP proxy Project </strong><em>Feb 2024 – Dec. 2024</em>
+										</p>
+										<ul>
+											<li style="text-align:left;">Work with Industrial Technology Research Institute. （工研院）</li>
+											<li style="text-align:left;">Code writing for base station TCP proxy mechanism.</li>
+										</ul>
+									</div>									
+								</div>
+							</ul>
+
+							
+
+						</section>
+
+						<!-- Contest Experience -->
+						<section id="Contest" class="main special">
+							<header class="major">
+								<h2>Contest Experience</h2>
+							</header>
+							<ul class='feature'>
+								<ul class='feature'>
+									<div class="row">
+										<div class="col-2 col-12-medium">
+												<p><span class="icon brand style2" ><img src="images/CyberSecurity2023.jpg" alt="" style="width:70%"></span></p>
+										</div>
+										<div class="col-7 col-12-medium">
+											<p style="text-align:left;">
+												<strong>2023 Cyber Security Competition </strong><em>Oct. 2023 – Nov. 2023</em>
+											</p>
+											<ul>
+												<li style="text-align:left;">This Cyber Security Contest is hold by the Ministry of Digital Affairs </li>
+												<li style="text-align:left;">Rank / All :  30 / 199 ( Advanced to the Finals.)</li>
+											</ul>
+										</div>									
+									</div>
+								</ul>
+								<ul class='feature'>
+									<div class="row">
+										<div class="col-2 col-12-medium">
+												<p><span class="icon brand style2" ><img src="images/Kaggle.png" alt="" style="width:70%"></span></p>
+										</div>
+										<div class="col-7 col-12-medium">
+											<p style="text-align:left;">
+												<strong>Google Universal Image Embedding </strong><em>Jul. 2022 – Nov. 2022</em>
+											</p>
+											<ul>
+												<li style="text-align:left;">It’s a Deep Learning contest from Kaggle hold by the Google </li>
+												<li style="text-align:left;">Design an Embedding Model to turn the raw image into Feature Embedding with Dimension less than 64, and project these Feature Embeddings to the Hyperplane for Clustering.</li>
+												<li style="text-align:left;">Rank / All :  58 / 1009 (5%)</li>
+											</ul>
+										</div>									
+									</div>
+								</ul>
+							</ul>
+
+							
+
+						</section>
+						<!-- Skills -->
+						<section id="skill" class="main special">
+							<header class="major">
+								<h2>Skills</h2>
+							</header>
+							<img src="https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white">
+							<img src="https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white">
+							<img src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white">
+							<img src="https://img.shields.io/badge/go-%2300ADD8.svg?style=for-the-badge&logo=go&logoColor=white">
+							<img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54">
+							<img src="https://img.shields.io/badge/GoogleCloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white">
+							<img src="https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white">
+							<img src="https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white">
+							<img src="https://img.shields.io/badge/apache-%23D42029.svg?style=for-the-badge&logo=apache&logoColor=white">
+							<img src="https://img.shields.io/badge/nginx-%23009639.svg?style=for-the-badge&logo=nginx&logoColor=white">
+							<img src="https://img.shields.io/badge/redis-%23DD0031.svg?style=for-the-badge&logo=redis&logoColor=white">
+							<img src="https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white">
+							<img src="https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white">
+							<img src="https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white">
+							<img src="https://img.shields.io/badge/kubernetes-%23326ce5.svg?style=for-the-badge&logo=kubernetes&logoColor=white">
+							<img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E">
+							<img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white">
+							<img src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white">
+						</section>
+					
+						<!-- Extra Activites -->
+					<!--
+						<section id="cta1" class="main special">
+							<header class="major">
+								<h2>Extra Activites</h2>
+							</header>
+
+							<ul class='feature'>
+								<div class="row">
+									<div class="col-2 col-12-medium">
+											<p><span class="icon brand style2" ><img src="images/yzume.jpg" alt="" style="width:70%"></span></p>
+									</div>
+									
+									<div class="col-7 col-12-medium">
+										<p style=text-align:left;><b>ME Student Association - Photographer, </b><i>Sep. 2018 - June 2019</i>
+										<ul>
+											<li style=text-align:left;>Responsible for photography for all activities of the Mechanical Department
+										</ul>
+										</p>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-2 col-12-medium">
+											<p><span class="icon brand style2" ><img src="images/yzurec.jpg" alt="" style="width:70%"></span></p>
+									</div>
+									<div class="col-7 col-12-medium">
+										<p style=text-align:left;><b>Pop Music Record Club - Equipment Section, </b><i>Sep. 2017 - June 2018</i>
+										<ul>
+											<li style=text-align:left;>Responsible for managing all club equipment
+											<li style=text-align:left;>Set up performance equipment for all events
+										</ul>
+										</p>
+									</div>
+								</div>
+							</ul>
+						</section>
+					-->
+					
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<section>
+							<h2>Contact Me</h2>
+							<dl class="alt">
+								<dt>Address</dt>
+								<dd>Taoyuan, Taiwan</dd>
+								<dt>Phone</dt>
+								<dd>(886) 0986611596</dd>
+								<dt>Email</dt>
+								<dd><a href="#">timmygood6590 (at) gmail.com</a></dd>
+							</dl>
+							<ul class="icons">
+								<li><a href="https://www.facebook.com/timmygood6590/" class="icon brands fa-facebook-f alt"><span class="label">Facebook</span></a></li>
+								<li><a href="https://github.com/MinTimmy" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
+								<li><a href="https://www.linkedin.com/in/ming-teng--/?locale=en_US" class="icon brands fa-linkedin alt"><span class="label">LinkedIn</span></a></li>
+							</ul>
+						</section>
+						<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
