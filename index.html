@@ -178,69 +178,64 @@
 											<em>Sep. 2023 – Jan. 2024</em> <br/>
 											<em>Tool: C language, <a href="https://elixir.bootlin.com/linux/v6.7/source">Linux V6.7 environment (Released Jan-2024)</a>, GDB.</em>
 										</p>
+										<p style="text-align:left;">(1) What the difference of the Virtual/Physical Address of the below items of different threads? (Shown in Figure 7)</p>
 										<ul>
-											<li style="text-align:left;">
-												Research in two topics “Paging” and “Scheduler” through adding new System Calls in the Linux Kernel.
-												<ul>
-													<li style="text-align:left;">
-														<ul>What the difference of the Virtual/Physical Address of the below items of different threads? (Shown in Figure 7)
-															<li style="text-align:left;">Global Variable</li>
-															<li style="text-align:left;">Local Variable</li>
-															<li style="text-align:left;">Thread Variable</li>
-															<li style="text-align:left;">Function foo()</li>
-															<li style="text-align:left;">Function main()</li>
-															<li style="text-align:left;">GNU C Library Function printf()</li>
-															<li style="text-align:left;">Local Heap Variable</li>
-														</ul>
-														<!-- Paging: What the difference of the Virtual/Physical Address of  Global Variable, Local Variable, Thread Variable, Function foo(), function main, library function printf(),local heap -->
-													</li>
-													<span class="image">
-														<img src="images/Figure_7.png" alt="" style="width:100%">
-														<p style="text-align:center;">Figure 7: The comparison of different items of different threads.</p>
-													</span>
-													<li style="text-align:left;">
-														<ul>What are the different segments of the process assigned? (Shown in Figure 8)
-															<li style="text-align:left;">Text Segment</li>
-															<li style="text-align:left;">Data Segment</li>
-															<li style="text-align:left;">BSS Segment</li>
-															<li style="text-align:left;">Heap Segment</li>
-															<li style="text-align:left;">Stack Segment</li>
-															<li style="text-align:left;">Library Segment</li>
-														</ul>
-													</li>
-													<span class="image">
-														<img src="images/Figure_8.png" alt="" style="width:100%">
-														<p style="text-align:center;">Figure 8: The distribution of different segments.</p>
-													</span>
-													<p>Scheduler:	How the Linux Scheduler do when we modify the priority of each process?</p>
-													<li style="text-align:left;">
-														<ul>Case 1: Normal Process
-															<li style="text-align:left;">Goal: In order to observe how the Normal Process with different priorities competes for the right to use the CPU in the run queue, and the operation status of <a href="https://en.wikipedia.org/wiki/Completely_Fair_Scheduler">CFS (Completely Fair Scheduler)</a>.</li>
-															<li style="text-align:left;">Conclusion: It can be found that the number of their content switches is very high, with an average of 300,000 times, and their execution time is about 60 seconds. <strong>There is no different execution time due to different priorities</strong>. (Shown in Figure 9)</li>
-															<span class="image">
-																<img src="images/Figure_9.png" alt="" style="width:100%">
-																<p style="text-align:center;">Figure 9</p>
-															</span>
-														</ul> 
-													</li>
-													<span class="image">
-														<ul>Case 2: Real Time Process (Fist in First out)
-															<li style="text-align:left;">Goal: In order to observe how the Real Time Process with different priorities competes for the right to use the CPU in the run queue, and the operation status of <a href="https://lwn.net/Articles/296419/">schedule policy Fist in First out</a>.</li>
-															<li style="text-align:left;">Conclusion: 10 Real Time Processes with different priorities. It can be found that the <strong>lower the priority, the longer the execution time and the more times the content switch</strong> is performed. (Shown in Figure 10)</li>
-															<img src="images/Figure_10.png" alt="" style="width:100%">
-															<p style="text-align:center;">Figure 10</p>
-														</ul>
-													</span>
-													<span class="image">
-														<ul>Case 3: Real Time Process (Round Robin)
-															<li style="text-align:left;">Goal: In order to observe how the Real Time Process with different priorities competes for the right to use the CPU in the run queue, and the operation status of <a href="https://en.wikipedia.org/wiki/Round-robin_scheduling">schedule policy Round Robin</a>.</li>
-															<li style="text-align:left;">Conclusion: 10 Real Time Processes with different priorities. It can be found that the <strong>lower the priority, the longer the execution time and the more times the content switch</strong> is performed. (Shown in Figure 11)</li>
-															<img src="images/Figure_11.png" alt="" style="width:100%">
-															<p style="text-align:center;">Figure 11</p>
-														</ul>
-													</span>
-												</ul>
-											</li>
+											<li style="text-align:left;">Global Variable</li>
+											<li style="text-align:left;">Local Variable</li>
+											<li style="text-align:left;">Thread Variable</li>
+											<li style="text-align:left;">Function foo()</li>
+											<li style="text-align:left;">Function main()</li>
+											<li style="text-align:left;">GNU C Library Function printf()</li>
+											<li style="text-align:left;">Local Heap Variable</li>
+										</ul>
+										<span class="image">
+											<img src="images/Figure_7.png" alt="" style="width:100%">
+											<p style="text-align:center;">Figure 7: The comparison of different items of different threads.</p>
+										</span>
+
+										<p>-----------------------------------------------------------------------------------------------------</p>
+
+										<p style="text-align:left;">(2) What are the different segments of the process assigned? (Shown in Figure 8)</p>
+										<ul style="text-align:center;">We are looking for following segments:
+											<li style="text-align:left;">Text Segment</li>
+											<li style="text-align:left;">Data Segment</li>
+											<li style="text-align:left;">BSS Segment</li>
+											<li style="text-align:left;">Heap Segment</li>
+											<li style="text-align:left;">Stack Segment</li>
+											<li style="text-align:left;">Library Segment</li>
+										</ul>
+										<span class="image">
+											<img src="images/Figure_8.png" alt="" style="width:100%">
+											<p style="text-align:center;">Figure 8: The distribution of different segments.</p>
+										</span>
+
+										<p>-----------------------------------------------------------------------------------------------------</p>
+
+										<p style="text-align:left;">(3) How the Linux Scheduler do when we modify the priority of each process?</p>
+										<ul>Case 1: Normal Process
+											<li style="text-align:left;">Goal: In order to observe how the Normal Process with different priorities competes for the right to use the CPU in the run queue, and the operation status of <a href="https://en.wikipedia.org/wiki/Completely_Fair_Scheduler">CFS (Completely Fair Scheduler)</a>.</li>
+											<li style="text-align:left;">Conclusion: It can be found that the number of their content switches is very high, with an average of 300,000 times, and their execution time is about 60 seconds. <strong>There is no different execution time due to different priorities</strong>. (Shown in Figure 9)</li>
+											<span class="image">
+												<img src="images/Figure_9.png" alt="" style="width:100%">
+												<p style="text-align:center;">Figure 9</p>
+											</span>
+										</ul> 
+										<ul>Case 2: Real Time Process (Fist in First out)
+											<li style="text-align:left;">Goal: In order to observe how the Real Time Process with different priorities competes for the right to use the CPU in the run queue, and the operation status of <a href="https://lwn.net/Articles/296419/">schedule policy Fist in First out</a>.</li>
+											<li style="text-align:left;">Conclusion: 10 Real Time Processes with different priorities. It can be found that the <strong>lower the priority, the longer the execution time and the more times the content switch</strong> is performed. (Shown in Figure 10)</li>
+											<span class="image">
+												<img src="images/Figure_10.png" alt="" style="width:100%">
+												<p style="text-align:center;">Figure 10</p>
+											</span>
+											
+										</ul>
+										<ul>Case 3: Real Time Process (Round Robin)
+											<li style="text-align:left;">Goal: In order to observe how the Real Time Process with different priorities competes for the right to use the CPU in the run queue, and the operation status of <a href="https://en.wikipedia.org/wiki/Round-robin_scheduling">schedule policy Round Robin</a>.</li>
+											<li style="text-align:left;">Conclusion: 10 Real Time Processes with different priorities. It can be found that the <strong>lower the priority, the longer the execution time and the more times the content switch</strong> is performed. (Shown in Figure 11)</li>
+											<span class="image">
+												<img src="images/Figure_11.png" alt="" style="width:100%">
+												<p style="text-align:center;">Figure 11</p>
+											</span>
 										</ul>
 									</div>									
 								</div>
@@ -325,6 +320,22 @@
 							<header class="major">
 								<h2>Skills</h2>
 							</header>
+							<ul class='feature'>
+								<div class="row">
+									<div class="col-7 col-12-medium">
+										<p style="text-align:left;">
+											<a href="https://csc.nics.nat.gov.tw/shield.aspx"><strong >2023 Cyber Security Competition (資安技能金盾獎)</strong> </a><br/>
+											<em>Oct. 2023 – Nov. 2023</em> <br/>
+											<em>Tool: Python, C, C++, Java, GDB, etc.</em>
+										</p>
+										<ul>
+											<li style="text-align:left;">This Cyber Security Contest is hold by the Ministry of Digital Affairs(數位發展部資通安全署)  </li>
+											<li style="text-align:left;">Rank:  30 / 199 ( Advanced to the Finals.)</li>
+										</ul>
+									</div>		
+								</div>
+								
+							</ul>
 							<img src="https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white">
 							<img src="https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white">
 							<img src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white">
