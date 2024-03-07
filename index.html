@@ -110,58 +110,61 @@
 											<em>Tool: C language, Raspberry Pi 3, GDB</em>
 										</p>
 										<ul>
-											<li style="text-align:left;">
-												Booting Implementation
-												<ul>
-													<li style="text-align:left;">Implement traversal devicetree to find the information of device rip3.</li>
-													<li style="text-align:left;">Implement initial ramdisk through archive format cpio.</li>
-													<li style="text-align:left;">Implement a bootloader that loads kernel images through UART.</li>
-												</ul>
-											</li>
-											<li style="text-align:left;">
-												Exception and Interrupt Implementation
-												<ul>
-													<li style="text-align:left;">Implement Synchronous Exception through enable CPU core timer to print something in the specific second. (Shown in Figure 1)</li>
-													<li style="text-align:left;">Implement Asynchronous Read and Write through UART's interrupt handler putting/getting data in/from buffer.(Shown in Figure 2)</li>
-												</ul>
-												<span class="image">
-													<img src="images/Figure_1.png" alt="" style="width:100%">
-													<p style="text-align:center;">Figure 1: Synchronous Exception Flowchart</p>
-													<img src="images/Figure_2.png" alt="" style="width:100%">
-													<p style="text-align:center;">Figure 2:  Asynchronous Read and Write Flowchart</p>
-												</span>
-												</p>
-												
-												
-											</li>
-											<li style="text-align:left;">
-												Thread and User Process Implementation
-												<ul>
-													<li style="text-align:left;">Implement Run Queues, Wait Queues, Scheduler and Context Switch. (Shown in Figure 3)</li>
-													<li style="text-align:left;">Implement Syscalls including fork(), exit(), kill(), read(), write(), etc. (Shown in Figure 4)</li>
-													<li style="text-align:left;">Implement POSIX Signal including signal() and kill(). (Shown in Figure 4)</li>
-												</ul>
-												<span class="image">
-													<img src="images/Figure_3.png" alt="" style="width:100%">
-													<p style="text-align:center;">Figure 3: Multithread Flowchart</p>
-													<img src="images/Figure_4.png" alt="" style="width:100%">
-													<p style="text-align:center;">Figure 4: Syscalls and POSIX Signal Flowchart</p>
-												</span>
-											</li>
-											<li style="text-align:left;">
-												Virtual Address Implementation
-												<ul>
-													<li style="text-align:left;">Implement 4-level Page Table for Kernel Process and User Process.(Shown in Figure 5)</li>
-													<li style="text-align:left;">Implement the function mmap() with VMA (Virtual Memory Area) for User Process.</li>
-													<li style="text-align:left;">Implement Page Fault Handler(Shown in Figure 6), Demand Paging and Copy-on-Write.</li>
-												</ul>
-												<span class="image">
-													<img src="images/Figure_5.png" alt="" style="width:100%">
-													<p style="text-align:center;">Figure 5: Kernel/User Paging Flowchart</p>
-													<img src="images/Figure_6.png" alt="" style="width:100%">
-													<p style="text-align:center;">Figure 6: Page Fault Handler Flowchart</p>
-												</span>
-											</li>
+											<h3> <strong>Booting Implementation</strong></h3>
+											<li style="text-align:left;">Implement traversal devicetree to find the information of device rip3.</li>
+											<li style="text-align:left;">Implement initial ramdisk through archive format cpio.</li>
+											<li style="text-align:left;">Implement a bootloader that loads kernel images through UART.</li>
+											<video width="640" height="360" controls>
+												<source src="Demo_Video/1.mp4" type="video/mp4">
+											</video>
+											<p style="text-align:center;">Demo Video 1</p>
+										</ul>
+										<ul>
+											<h3><strong>Exception and Interrupt Implementation</strong></h3>
+											<li style="text-align:left;">Implement Synchronous Exception through enable CPU core timer to print something in the specific second. (Shown in Figure 1)</li>
+											<li style="text-align:left;">Implement Asynchronous Read and Write through UART's interrupt handler putting/getting data in/from buffer.(Shown in Figure 2)</li>
+											<video width="640" height="360" controls>
+												<source src="Demo_Video/2.mp4" type="video/mp4">
+											</video>
+											<p style="text-align:center;">Demo Video 2</p>
+											<span class="image">
+												<img src="images/Figure_1.png" alt="" style="width:100%">
+												<p style="text-align:center;">Figure 1: Synchronous Exception Flowchart</p>
+												<img src="images/Figure_2.png" alt="" style="width:100%">
+												<p style="text-align:center;">Figure 2:  Asynchronous Read and Write Flowchart</p>
+											</span>
+										</ul>		
+										<ul>
+											<h3><strong>Thread and User Process Implementation</strong></h3>
+											<li style="text-align:left;">Implement Run Queues, Wait Queues, Scheduler and Context Switch. (Shown in Figure 3)</li>
+											<li style="text-align:left;">Implement Syscalls including fork(), exit(), kill(), read(), write(), etc. (Shown in Figure 4)</li>
+											<li style="text-align:left;">Implement POSIX Signal including signal() and kill(). (Shown in Figure 4)</li>
+											<video width="640" height="360" controls>
+												<source src="Demo_Video/3.mp4" type="video/mp4">
+											</video>
+											<p style="text-align:center;">Demo Video 3</p>
+											<span class="image">
+												<img src="images/Figure_3.png" alt="" style="width:100%">
+												<p style="text-align:center;">Figure 3: Multithread Flowchart</p>
+												<img src="images/Figure_4.png" alt="" style="width:100%">
+												<p style="text-align:center;">Figure 4: Syscalls and POSIX Signal Flowchart</p>
+											</span>
+										</ul>
+										<ul>
+											<h3><strong>Virtual Address Implementation</strong></h3>
+											<li style="text-align:left;">Implement 4-level Page Table for Kernel Process and User Process.(Shown in Figure 5)</li>
+											<li style="text-align:left;">Implement the function mmap() with VMA (Virtual Memory Area) for User Process.</li>
+											<li style="text-align:left;">Implement Page Fault Handler(Shown in Figure 6), Demand Paging and Copy-on-Write.</li>
+											<video width="640" height="360" controls>
+												<source src="Demo_Video/4.mp4" type="video/mp4">
+											</video>
+											<p style="text-align:center;">Demo Video 4</p>
+											<span class="image">
+												<img src="images/Figure_5.png" alt="" style="width:100%">
+												<p style="text-align:center;">Figure 5: Kernel/User Paging Flowchart</p>
+												<img src="images/Figure_6.png" alt="" style="width:100%">
+												<p style="text-align:center;">Figure 6: Page Fault Handler Flowchart</p>
+											</span>
 										</ul>
 									</div>									
 								</div>
